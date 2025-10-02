@@ -6,12 +6,20 @@
   <title>Dorra Dhibi — Portfolio</title>
   <meta name="description" content="Interactive portfolio with search, filters, modal details. Green theme." />
 
-  <!-- No LinkedIn preview image; safe to deploy without /preview.jpg -->
+  <!-- ✅ Social preview -->
+  <link rel="canonical" href="https://YOUR-VERCEL-URL.vercel.app/">
   <meta property="og:title" content="Dorra Dhibi — LCA & Sustainability Portfolio" />
   <meta property="og:description" content="Interactive portfolio: projects, bio, achievements, and contact." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://YOUR-VERCEL-URL.vercel.app/" />
+  <meta property="og:image" content="https://YOUR-VERCEL-URL.vercel.app/preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dorra Dhibi — portfolio hero section" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dorra Dhibi — LCA & Sustainability Portfolio" />
+  <meta name="twitter:description" content="Interactive portfolio: projects, bio, achievements, and contact." />
+  <meta name="twitter:image" content="https://YOUR-VERCEL-URL.vercel.app/preview.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,9 +74,66 @@
     .modal-footer{border-top:1px solid var(--border);border-bottom:none;display:flex;gap:8px}
     .modal-body{padding:16px;display:grid;gap:10px}
 
-    /* Achievements */
-    .ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
-    .ach-img{width:100%;border-radius:10px;border:1px solid var(--border);object-fit:cover}
+    /* ✅ Achievements — compact cards like the screenshot */
+    #achievements { margin-top: 28px; }
+    .ach-list{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+    }
+    .ach-card{
+      border:1px solid var(--border);
+      background:var(--panel);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .ach-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(0,0,0,.25);
+    }
+    .ach-card > img{
+      width:100%;
+      height:190px;             /* large header image */
+      object-fit:cover;
+      display:block;
+    }
+    .ach-card .body{
+      padding:14px;
+      display:grid;
+      gap:10px;
+    }
+    .ach-meta{
+      font-size:.92rem;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:-2px;
+    }
+    .ach-title{
+      font-size:1rem;
+      font-weight:800;
+      color:var(--text);
+    }
+    .ach-note{
+      margin:0;
+      font-size:.95rem;
+      color:var(--text);
+    }
+    .ach-thumbs{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+    }
+    .ach-thumbs img{
+      width:100%;
+      height:64px;
+      object-fit:cover;
+      border-radius:10px;
+      border:1px solid var(--border);
+    }
 
     /* Footer and helpers */
     .site-footer{border-top:1px solid var(--border);margin-top:40px;color:var(--muted)}
@@ -82,8 +147,8 @@
     }
     #intro-title { animation: titlePop .9s cubic-bezier(.2,.7,.2,1) both; }
 
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr 1fr}.ach-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:600px){.project-grid{grid-template-columns:1fr}.ach-grid{grid-template-columns:1fr}}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr 1fr}.ach-list{grid-template-columns:1fr 1fr}}
+    @media (max-width:600px){.project-grid{grid-template-columns:1fr}.ach-list{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -153,62 +218,62 @@
     </dialog>
 
     <!-- Achievements -->
-   <section id="achievements" class="container" aria-labelledby="achievements-title">
-  <h2 id="achievements-title">Achievements</h2>
-  <div class="ach-list">
-    <!-- SUSI -->
-    <article class="ach-card">
-      <img src="susi1.jpg" alt="SUSI EE 2024 main" />
-      <div class="body">
-        <div class="ach-meta"><strong class="ach-title">SUSI EE Participant</strong><span>2024</span></div>
-        <p class="ach-note">Selected (1 of 4 / ~1,000 applicants), U.S. Dept. of State.</p>
-        <div class="ach-thumbs">
-          <img src="susi2.jpg" alt="" />
-          <img src="susi3.jpg" alt="" />
-          <img src="susi5.jpg" alt="" />
-        </div>
-      </div>
-    </article>
+    <section id="achievements" class="container" aria-labelledby="achievements-title">
+      <h2 id="achievements-title">Achievements</h2>
+      <div class="ach-list">
+        <!-- SUSI -->
+        <article class="ach-card">
+          <img src="susi1.jpg" alt="SUSI EE 2024 main" />
+          <div class="body">
+            <div class="ach-meta"><strong class="ach-title">SUSI EE Participant</strong><span>2024</span></div>
+            <p class="ach-note">Selected (1 of 4 / ~1,000 applicants), U.S. Dept. of State.</p>
+            <div class="ach-thumbs">
+              <img src="susi2.jpg" alt="" />
+              <img src="susi3.jpg" alt="" />
+              <img src="susi5.jpg" alt="" />
+            </div>
+          </div>
+        </article>
 
-    <!-- JCI Awards -->
-    <article class="ach-card">
-      <img src="reward.jpg" alt="JCI INSAT awards main" />
-      <div class="body">
-        <div class="ach-meta"><strong class="ach-title">JCI INSAT Awards</strong><span>2024</span></div>
-        <p class="ach-note">Best Prospective Member & Exceptional Member.</p>
-        <div class="ach-thumbs">
-          <img src="reward12.jpg" alt="" />
-          <img src="reward33.jpg" alt="" />
-        </div>
-      </div>
-    </article>
+        <!-- JCI Awards -->
+        <article class="ach-card">
+          <img src="reward.jpg" alt="JCI INSAT awards main" />
+          <div class="body">
+            <div class="ach-meta"><strong class="ach-title">Best Prospective & Exceptional Member — JCI INSAT</strong><span>2024</span></div>
+            <p class="ach-note">Recognized for leadership, dedication, and impact.</p>
+            <div class="ach-thumbs">
+              <img src="reward12.jpg" alt="" />
+              <img src="reward33.jpg" alt="" />
+            </div>
+          </div>
+        </article>
 
-    <!-- Hackathon -->
-    <article class="ach-card">
-      <img src="hack.jpg" alt="AI Hackathon main" />
-      <div class="body">
-        <div class="ach-meta"><strong class="ach-title">1st — Business AI Hackathon</strong><span>2025</span></div>
-        <p class="ach-note">Led plan & pitch for an AI solution.</p>
-        <div class="ach-thumbs">
-          <img src="hack2.jpg" alt="" />
-        </div>
-      </div>
-    </article>
+        <!-- Hackathon -->
+        <article class="ach-card">
+          <img src="hack.jpg" alt="AI Hackathon main" />
+          <div class="body">
+            <div class="ach-meta"><strong class="ach-title">1st — Business AI Hackathon</strong><span>2025</span></div>
+            <p class="ach-note">Led plan & pitch for an AI-driven solution.</p>
+            <div class="ach-thumbs">
+              <img src="hack2.jpg" alt="" />
+            </div>
+          </div>
+        </article>
 
-    <!-- Debate -->
-    <article class="ach-card">
-      <img src="debates.jpg" alt="Debate competition main" />
-      <div class="body">
-        <div class="ach-meta"><strong class="ach-title">1st — Debate Competition</strong><span>2025</span></div>
-        <p class="ach-note">Public speaking, critical thinking, teamwork.</p>
-        <div class="ach-thumbs">
-          <img src="debates2.jpg" alt="" />
-          <img src="debates4.jpg" alt="" />
-        </div>
+        <!-- Debate -->
+        <article class="ach-card">
+          <img src="debates.jpg" alt="Debate competition main" />
+          <div class="body">
+            <div class="ach-meta"><strong class="ach-title">1st — Debate Competition</strong><span>2025</span></div>
+            <p class="ach-note">Public speaking, critical thinking, teamwork.</p>
+            <div class="ach-thumbs">
+              <img src="debates2.jpg" alt="" />
+              <img src="debates4.jpg" alt="" />
+            </div>
+          </div>
+        </article>
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
     <!-- Contact (your details) -->
     <section id="contact" class="contact container" aria-labelledby="contact-title">
@@ -226,7 +291,6 @@
   </footer>
 
   <script>
-    // ======= Data (projects) — update image filenames to match your root files =======
     const PROJECTS = [
       { id:"microalgae-biodiesel-lca", title:"Comparative LCA of Microalgae Biodiesel (PBR vs Raceway)", year:2025, tags:["LCA","Bioenergy","Research"], tech:["openLCA","Ecoinvent","Python"], description:"Photobioreactors vs. open raceway ponds—environmental tradeoffs for algae biodiesel.", long:"Compares cultivation/processing inventories for PBR vs ORP across scenarios...", highlights:["Scenario comparison (PBR vs ORP)","Hotspot analysis","Recommendations for energy inputs"], demo:"https://drive.google.com/file/d/1aBh45azVgrKT8o_I-0oFTAjDKnx1IOjH/view", image:"microalgae.png" },
       { id:"pyrolysis-lca", title:"LCA of Biomass & Plastic Waste Pyrolysis", year:2025, tags:["LCA","Circular Economy","Energy"], tech:["openLCA","Python"], description:"Environmental assessment of pyrolysis for mixed biomass/plastics.", long:"Three scenarios—slow, fast, co-pyrolysis...", highlights:["Feedstock sensitivity","Co-product credits","Energy recovery mapping"], demo:"https://drive.google.com/file/d/1yG_I_2fzkLJwaKeiEFlAFRJgBlmYYZ4Z/view", image:"pyrolysis.png" },
@@ -238,7 +302,6 @@
       { id:"cosmetics-innovation-natural", title:"Cosmetic Innovations: Natural Ingredients & Functionality", year:2025, tags:["Research","Cosmetics","Sustainability"], tech:["Review","Evidence Synthesis"], description:"Which new naturals deliver real functional gains?", long:"Sun-care innovation: science, filters, formulation, testing...", demo:"https://drive.google.com/file/d/1Xf7fu1PqpQfhCMW_bW7EfIMmzTC6Tr1P/view", image:"cosmetics.png" }
     ];
 
-    // ======= State & Elements =======
     const state={projects:PROJECTS,activeTags:new Set(),q:"",sort:"newest"};
     const els={
       grid:document.getElementById("projectGrid"),
@@ -251,7 +314,6 @@
       themeToggle:document.getElementById("themeToggle"),
     };
 
-    // Theme toggle + year
     (function initTheme(){
       const saved=localStorage.getItem("theme");
       if(saved==="light") document.documentElement.classList.add("light");
@@ -262,7 +324,6 @@
       });
     })();
 
-    // Build tag bar
     (function buildTagBar(data){
       const all=new Set(); data.forEach(p=>p.tags.forEach(t=>all.add(t)));
       const tags=Array.from(all).sort((a,b)=>a.localeCompare(b));
@@ -277,11 +338,9 @@
       });
     })(PROJECTS);
 
-    // Inputs
     els.q.addEventListener("input",e=>{state.q=e.target.value.toLowerCase().trim();updateHash();render();});
     els.sort.addEventListener("change",e=>{state.sort=e.target.value;updateHash();render();});
 
-    // Render
     function render(){
       const {projects,activeTags,q,sort}=state;
       let list=projects.filter(p=>{
@@ -340,7 +399,6 @@
       },{once:true});
     }
 
-    // Hash sync
     function applyURLHash(){
       const params=new URLSearchParams(location.hash.replace(/^#/,""));
       state.q=params.get("q")||""; state.sort=params.get("sort")||"newest";
@@ -363,7 +421,6 @@
     }
     window.addEventListener("hashchange",applyURLHash);
 
-    // Init
     (function(){ render(); applyURLHash(); })();
   </script>
 </body>
