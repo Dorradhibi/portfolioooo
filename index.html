@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dorra Dhibi — Portfolio</title>
-  <meta name="description" content="Interactive portfolio with search, filters, modal details. Green theme." />
+  <meta name="description" content="Dorra Dhibi's LCA and sustainability portfolio: prospective LCA at SPAAK Circular Solutions, circular bio-based projects, and an interactive compost CFF dashboard." />
 
   <!-- ✅ Social preview -->
   <link rel="canonical" href="https://YOUR-VERCEL-URL.vercel.app/">
@@ -65,6 +65,29 @@
     .card .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem}
     .card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
     .badge{font-size:.8rem;padding:4px 8px;border:1px solid var(--border);border-radius:999px}
+    .card .actions{flex-wrap:wrap;margin-top:6px}
+    .project-visual{aspect-ratio:16/9;padding:16px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:linear-gradient(120deg,rgba(32,192,92,.12),rgba(65,212,138,.06));border-bottom:1px solid var(--border)}
+    .visual-heading{font-size:.85rem;font-weight:800;margin:0}
+    .visual-subtitle{font-size:.75rem;color:var(--muted);margin:0}
+    .mini-series{display:grid;grid-template-columns:38px 1fr;gap:8px;align-items:center;font-size:.75rem}
+    .mini-bars{display:grid;gap:5px}
+    .mini-bar{height:18px;border-radius:3px;font-size:.7rem;line-height:18px;color:#fff;padding-left:5px;min-width:42px}
+    .mini-bar.cutoff{background:#5c7b8b}.mini-bar.cff{background:#138047}
+    .mini-legend{display:flex;gap:14px;font-size:.7rem;color:var(--muted)}
+    .mini-legend i{display:inline-block;width:8px;height:8px;margin-right:4px;border-radius:2px}
+    .process-strip{display:grid;gap:8px;grid-template-columns:1fr 1fr 1fr;align-items:stretch}
+    .process-step{border:1px solid var(--border);background:var(--panel);border-radius:9px;padding:9px 6px;text-align:center;font-size:.72rem;line-height:1.4;display:grid;align-items:center}
+    .process-step span{display:block;color:var(--muted);font-size:.65rem;margin-bottom:4px}
+    #experience{margin-top:32px}
+    .experience-card{padding:22px;margin-bottom:18px}
+    .experience-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+    .experience-header h3{margin:0;font-size:1.15rem}
+    .experience-role{margin:5px 0 0;color:var(--brand-2);font-weight:600}
+    .experience-year{color:var(--muted);white-space:nowrap}
+    .experience-card p,.experience-card li{font-size:.95rem}
+    .experience-card ul{padding-left:20px;margin-top:6px}
+    .experience-card li{margin:7px 0}
+    .experience-tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
 
     /* Modal */
     dialog.modal{border:none;border-radius:20px;padding:0;max-width:820px;width:95%;background:var(--panel);color:var(--text)}
@@ -176,6 +199,7 @@
         <div class="quick-links">
           <a class="chip" href="#skills">Skills</a>
           <a class="chip" href="#projects">Projects</a>
+          <a class="chip" href="#experience">Experience</a>
           <a class="chip" href="#achievements">Achievements</a>
         </div>
       </div>
@@ -216,6 +240,29 @@
         </footer>
       </form>
     </dialog>
+
+    <!-- Professional experience -->
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <article class="card experience-card">
+        <div class="experience-header">
+          <div>
+            <h3>SPAAK Circular Solutions</h3>
+            <p class="experience-role">Prospective Life Cycle Assessment</p>
+          </div>
+          <span class="experience-year">2026</span>
+        </div>
+        <p>Assessed the potential environmental performance of emerging circular and bio-based technologies before industrial deployment, translating process data into future production scenarios.</p>
+        <ul>
+          <li>Developed foreground inventories and scale-up scenarios for banana-leaf-derived superabsorbent hydrogel and a biofumigant made from brewer's spent grain.</li>
+          <li>Compared the proposed routes with fossil-based superabsorbent polymers and conventional fumigants.</li>
+          <li>Evaluated environmental hotspots and scenario choices, including solvent recovery and alternative heat sources, to support process-development decisions.</li>
+        </ul>
+        <div class="experience-tools" aria-label="SPAAK methods and tools">
+          <span class="badge">Prospective LCA</span><span class="badge">openLCA</span><span class="badge">ecoinvent</span><span class="badge">ReCiPe 2016</span><span class="badge">Scale-up scenarios</span>
+        </div>
+      </article>
+    </section>
 
     <!-- Achievements -->
     <section id="achievements" class="container" aria-labelledby="achievements-title">
@@ -292,6 +339,9 @@
 
   <script>
     const PROJECTS = [
+      { id:"compost-cff-dashboard", title:"Compost CFF Dashboard — Green Waste & GFT", year:2026, tags:["LCA","Circular Economy","Interactive Tool"], tech:["openLCA","ecoinvent 3.12","EF 3.1","JavaScript"], description:"An interactive dashboard to compare compost footprints using CFF and cut-off, with editable inputs and sensitivity analysis.", long:"Developed from my compost LCA work at Attero, this dashboard makes the Green Waste and GFT / biowaste study models accessible through a browser. Users can enter process inputs and feedstock composition, compare Circular Footprint Formula scenarios with cut-off, and explore all 16 EF 3.1 parent impact categories. Scenario assumptions and study reference data remain visible.", highlights:["Editable yield, electricity, transport, fuel and direct emissions","Scenario comparisons across 16 EF 3.1 impact categories","Hotspot charts, sensitivity curves and tornado ranking","CSV export and optional saving of inputs on the user's device"], demo:"https://compost-cff-dashboard.sadosa.chatgpt.site", demoLabel:"Open dashboard", modalDemoLabel:"Open dashboard", visual:"cff" },
+      { id:"spaak-hydrogel-prospective-lca", title:"Prospective LCA of Banana-Leaf Superabsorbent Hydrogel", year:2026, tags:["LCA","Prospective LCA","Circular Economy"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scenario modelling"], description:"SPAAK Circular Solutions: assessing a banana-leaf-derived hydrogel against fossil-based superabsorbent polymers.", long:"Conducted prospective LCA of a route converting banana-leaf residues into cellulose, carboxymethyl cellulose (CMC) and superabsorbent hydrogel. Modelled industrial-scale scenarios and compared the proposed material with fossil-based superabsorbent polymers. The assessment explored environmental hotspots and process options before industrial deployment.", highlights:["Foreground inventory development and industrial scale-up scenarios","Benchmark comparison with fossil-based superabsorbent polymers","Acetic-acid and ethanol recovery scenarios","Alternative heat sources and environmental hotspot analysis"], visual:"hydrogel" },
+      { id:"spaak-biofumigant-prospective-lca", title:"Prospective LCA of a Brewer's Spent Grain Biofumigant", year:2026, tags:["LCA","Prospective LCA","Bio-based Products"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scale-up modelling"], description:"SPAAK Circular Solutions: exploring future industrial production of a fermentation-based biofumigant from brewery residues.", long:"Assessed an early-stage biofumigant route using brewer's spent grain and fermentation. Built a prospective cradle-to-gate model for projected industrial production and benchmarked the route against phosphine and methyl bromide. Results were interpreted as scenario-dependent projections, with attention to data limitations and uncertainty.", highlights:["Goal and scope, functional unit and modular process inventories","Laboratory-to-industrial scale-up scenarios","Benchmarking against conventional fumigants","Hotspot analysis of energy, fermentation inputs and downstream processing"], visual:"biofumigant" },
       { id:"microalgae-biodiesel-lca", title:"Comparative LCA of Microalgae Biodiesel (PBR vs Raceway)", year:2025, tags:["LCA","Bioenergy","Research"], tech:["openLCA","Ecoinvent","Python"], description:"Photobioreactors vs. open raceway ponds—environmental tradeoffs for algae biodiesel.", long:"Compares cultivation/processing inventories for PBR vs ORP across scenarios...", highlights:["Scenario comparison (PBR vs ORP)","Hotspot analysis","Recommendations for energy inputs"], demo:"https://drive.google.com/file/d/1aBh45azVgrKT8o_I-0oFTAjDKnx1IOjH/view", image:"microalgae.png" },
       { id:"pyrolysis-lca", title:"LCA of Biomass & Plastic Waste Pyrolysis", year:2025, tags:["LCA","Circular Economy","Energy"], tech:["openLCA","Python"], description:"Environmental assessment of pyrolysis for mixed biomass/plastics.", long:"Three scenarios—slow, fast, co-pyrolysis...", highlights:["Feedstock sensitivity","Co-product credits","Energy recovery mapping"], demo:"https://drive.google.com/file/d/1yG_I_2fzkLJwaKeiEFlAFRJgBlmYYZ4Z/view", image:"pyrolysis.png" },
       { id:"levulinic-acid-uncertainty", title:"LCA under Uncertainty: Levulinic Acid (Bio vs Petro)", year:2025, tags:["LCA","Uncertainty","Chemistry"], tech:["openLCA","Monte Carlo","TEA"], description:"Bio-based vs petrochemical LA with sustainability, safety & TEA.", long:"Comparative LCA/TEA/safety framework...", highlights:["Monte Carlo propagation","Safety considerations","TEA integration"], demo:"https://drive.google.com/file/d/18IM9c6p5Of-J07kZaibXmKMmamFAKyjW/view", image:"levulinic.png" },
@@ -341,6 +391,18 @@
     els.q.addEventListener("input",e=>{state.q=e.target.value.toLowerCase().trim();updateHash();render();});
     els.sort.addEventListener("change",e=>{state.sort=e.target.value;updateHash();render();});
 
+    function projectVisual(p){
+      if(p.visual==="cff") return `<div class="project-visual" role="img" aria-label="Study S2 climate results in kg CO2-equivalent per tonne compost: Green Waste cut-off 166.3, CFF 132.3; GFT cut-off 165.6, CFF 86.2.">
+        <p class="visual-heading">CFF vs cut-off</p><p class="visual-subtitle">Study S2 · kg CO₂-eq / t compost</p>
+        ${[["GW",166.3,132.3],["GFT",165.6,86.2]].map(([name,cutoff,cff])=>`<div class="mini-series"><strong>${name}</strong><div class="mini-bars"><div class="mini-bar cutoff" style="width:${cutoff/180*100}%">${cutoff}</div><div class="mini-bar cff" style="width:${cff/180*100}%">${cff}</div></div></div>`).join("")}
+        <div class="mini-legend"><span><i style="background:#5c7b8b"></i>Cut-off</span><span><i style="background:#138047"></i>CFF</span></div></div>`;
+      if(p.visual==="hydrogel" || p.visual==="biofumigant"){
+        const steps=p.visual==="hydrogel"?["Banana-leaf residues","Cellulose & CMC","Superabsorbent hydrogel"]:["Brewer's spent grain","Fermentation","Biofumigant"];
+        return `<div class="project-visual" role="img" aria-label="${steps.join(' to ')}. Prospective life cycle assessment at SPAAK."><p class="visual-heading">Prospective LCA · SPAAK</p><div class="process-strip">${steps.map((label,i)=>`<div class="process-step"><span>Stage ${i+1}</span>${label}</div>`).join("")}</div><p class="visual-subtitle">Inventory · Scale-up scenarios · Hotspots</p></div>`;
+      }
+      return "";
+    }
+
     function render(){
       const {projects,activeTags,q,sort}=state;
       let list=projects.filter(p=>{
@@ -360,13 +422,13 @@
         const imgSrc = p.image && p.image.trim() ? p.image
           : "data:image/svg+xml;utf8," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2320c05c'/><stop offset='100%' stop-color='%237ce2a8'/></linearGradient></defs><rect width='1200' height='675' fill='url(%23g)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='44' fill='white'>${p.title}</text></svg>`);
         card.innerHTML=`
-          <img src="${imgSrc}" alt="${p.title} image" />
+          ${projectVisual(p)||`<img src="${imgSrc}" alt="${p.title} image" />`}
           <div class="content">
             <div class="meta"><strong>${p.title}</strong><span>${p.year||""}</span></div>
             <p>${p.description}</p>
             <div class="tags">${(p.tags||[]).map(t=>`<span class="badge">${t}</span>`).join("")}</div>
             <div class="actions">
-              ${p.demo?`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">Demo</a>`:""}
+              ${p.demo?`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">${p.demoLabel||"Demo"}</a>`:""}
               ${p.repo?`<a class="btn" href="${p.repo}" target="_blank" rel="noopener">Code</a>`:""}
               <button class="btn primary" data-id="${p.id}">Details</button>
             </div>
@@ -381,12 +443,12 @@
       const imgSrc=p.image&&p.image.trim()?p.image:
         "data:image/svg+xml;utf8,"+encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2320c05c'/><stop offset='100%' stop-color='%237ce2a8'/></linearGradient></defs><rect width='1200' height='675' fill='url(%23g)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='44' fill='white'>${p.title}</text></svg>`);
       els.modalBody.innerHTML=`
-        <img src="${imgSrc}" alt="${p.title} image" style="width:100%;border-radius:12px;border:1px solid var(--border);" />
+        ${projectVisual(p)||`<img src="${imgSrc}" alt="${p.title} image" style="width:100%;border-radius:12px;border:1px solid var(--border);" />`}
         <p>${p.long||p.description}</p>
         ${p.highlights?.length?`<ul>${p.highlights.map(h=>`<li>${h}</li>`).join("")}</ul>`:""}
         ${p.tech?.length?`<p><strong>Tech:</strong> ${p.tech.join(", ")}</p>`:""}
         <div class="actions">
-          ${p.demo?`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">Live Demo</a>`:""}
+          ${p.demo?`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">${p.modalDemoLabel||"Live Demo"}</a>`:""}
           ${p.repo?`<a class="btn" href="${p.repo}" target="_blank" rel="noopener">Repository</a>`:""}
         </div>`;
       const params=new URLSearchParams(location.hash.replace(/^#/,""));
@@ -425,3 +487,4 @@
   </script>
 </body>
 </html>
+
