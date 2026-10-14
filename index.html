@@ -3,91 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dorra Dhibi — Portfolio</title>
-  <meta name="description" content="Dorra Dhibi's LCA and sustainability portfolio: a compost CFF dashboard developed for her graduation thesis internship at Attero, and prospective LCA at SPAAK Circular Solutions." />
+  <title>Dorra Dhibi — LCA &amp; Sustainability Engineer | Circular Economy, Bio-based Systems &amp; GHG Modelling</title>
+  <meta name="description" content="LCA &amp; Sustainability Engineer. Specialized in prospective and comparative LCA, PEF/CFF, scenario modelling and sensitivity analysis. 8 LCA projects across compost, bio-based materials, biofuels and bioplastics." />
 
-  <!-- ✅ Social preview -->
-  <link rel="canonical" href="https://YOUR-VERCEL-URL.vercel.app/">
-  <meta property="og:title" content="Dorra Dhibi — LCA & Sustainability Portfolio" />
-  <meta property="og:description" content="Interactive portfolio: projects, bio, achievements, and contact." />
+  <!-- Social preview -->
+  <link rel="canonical" href="https://dorraportfolio.netlify.app/">
+  <meta property="og:title" content="Dorra Dhibi — LCA & Sustainability Engineer | Circular Economy, Bio-based Systems & GHG Modelling" />
+  <meta property="og:description" content="Specialized in prospective and comparative LCA, PEF/CFF, scenario modelling and sensitivity analysis. 8 LCA projects across compost, bio-based materials, biofuels and bioplastics." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-VERCEL-URL.vercel.app/" />
-  <meta property="og:image" content="https://YOUR-VERCEL-URL.vercel.app/preview.jpg" />
+  <meta property="og:url" content="https://dorraportfolio.netlify.app/" />
+  <meta property="og:image" content="https://dorraportfolio.netlify.app/preview.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Dorra Dhibi — portfolio hero section" />
+  <meta property="og:image:alt" content="Dorra Dhibi — LCA engineer portfolio" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dorra Dhibi — LCA & Sustainability Portfolio" />
-  <meta name="twitter:description" content="Interactive portfolio: projects, bio, achievements, and contact." />
-  <meta name="twitter:image" content="https://YOUR-VERCEL-URL.vercel.app/preview.jpg" />
+  <meta name="twitter:title" content="Dorra Dhibi — LCA & Sustainability Engineer | Circular Economy, Bio-based Systems & GHG Modelling" />
+  <meta name="twitter:description" content="Specialized in prospective and comparative LCA, PEF/CFF, scenario modelling and sensitivity analysis." />
+  <meta name="twitter:image" content="https://dorraportfolio.netlify.app/preview.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0b0f0c;--panel:#0f1511;--text:#e8f3ea;--muted:#9fb7a6;--brand:#20c05c;--brand-2:#7ce2a8;--chip:#122218;--border:#1b2a21;--shadow:0 10px 30px rgba(0,0,0,.28);--radius:14px}
+    :root{--font-head:Manrope,Inter,system-ui,sans-serif;--bg:#0b0f0c;--panel:#0f1511;--text:#e8f3ea;--muted:#9fb7a6;--brand:#20c05c;--brand-2:#7ce2a8;--chip:#122218;--border:#1b2a21;--shadow:0 10px 30px rgba(0,0,0,.28);--radius:14px}
     :root.light{--bg:#f6fbf8;--panel:#fff;--text:#0b0f0c;--muted:#4d5a52;--brand:#0e9f4a;--brand-2:#41d48a;--chip:#e9f7ef;--border:#dfe7e1;--shadow:0 8px 22px rgba(16,24,40,.08)}
-    *{box-sizing:border-box} html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 800px at 20% -5%, rgba(32,192,92,.15), transparent 55%),radial-gradient(900px 600px at 120% 10%, rgba(65,212,138,.14), transparent 45%),var(--bg);color:var(--text);line-height:1.6}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:76px} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 800px at 20% -5%, rgba(32,192,92,.15), transparent 55%),radial-gradient(900px 600px at 120% 10%, rgba(65,212,138,.14), transparent 45%),var(--bg);color:var(--text);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    h1,h2,h3{line-height:1.2;font-family:var(--font-head);letter-spacing:-.015em}
+    h2{font-size:2rem;font-weight:800;margin:0 0 14px}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--brand-2);outline-offset:2px}
     .container{max-width:1100px;margin:0 auto;padding:20px}
+    section{margin-top:32px}
 
-    /* Header */
-    .site-header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);gap:14px}
+    /* Header (sticky) */
+    .header-wrap{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .site-header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:10px;padding-bottom:10px}
     .brand{display:flex;gap:12px;align-items:center}
-    .avatar{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#062010;font-weight:800;box-shadow:var(--shadow)}
-    .subtitle{color:var(--muted);margin-top:-6px}
-    .actions{display:flex;gap:10px;align-items:center}
-    .btn{border:1px solid var(--border);background:var(--panel);color:var(--text);padding:8px 12px;border-radius:var(--radius);cursor:pointer;text-decoration:none;box-shadow:var(--shadow);transition:transform .08s ease}
+    .brand h1{margin:0;font-size:1.2rem;font-weight:800}
+    .avatar{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#062010;font-weight:800;box-shadow:var(--shadow)}
+    .subtitle{color:var(--muted);margin:0;font-size:.85rem}
+    .actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .nav-links{display:flex;gap:4px}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem;padding:6px 10px;border-radius:999px}
+    .nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--chip)}
+    .btn{font-weight:600;border:1px solid var(--border);background:var(--panel);color:var(--text);padding:8px 12px;border-radius:var(--radius);cursor:pointer;text-decoration:none;box-shadow:var(--shadow);transition:transform .08s ease;font:inherit;font-size:.92rem}
     .btn:hover{transform:translateY(-1px)}
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#062010;border:none;font-weight:700}
 
     /* Hero */
-    .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center;margin-top:22px}
+    .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center;margin-top:30px}
+    .avail{display:inline-flex;gap:8px;align-items:center;padding:6px 12px;border-radius:999px;background:var(--chip);border:1px solid var(--border);font-weight:600;font-size:.88rem}
+    .avail i{width:9px;height:9px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 0 rgba(32,192,92,.6);animation:pulse 2s infinite}
+    @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(32,192,92,0)}100%{box-shadow:0 0 0 0 rgba(32,192,92,0)}}
+    #intro-title{font-size:clamp(1.9rem,3.8vw,2.7rem);margin:14px 0 12px;font-weight:800;letter-spacing:-.03em;line-height:1.08}
+    .lead{font-size:1.15rem;line-height:1.7;color:var(--muted);max-width:60ch;margin:0 0 16px}
+    .lead strong{color:var(--text)}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
     .hero-img{width:100%;border-radius:9999px;border:4px solid rgba(32,192,92,.6);box-shadow:0 10px 30px rgba(0,0,0,.28),0 0 0 6px rgba(32,192,92,.2);background:linear-gradient(120deg, rgba(32,192,92,.15), rgba(65,212,138,.12));aspect-ratio:1/1;object-fit:cover;object-position:50% 20%}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--chip);color:var(--text);text-decoration:none;font-weight:600;border:1px solid var(--border);font-size:.88rem}
     .quick-links{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--chip);color:var(--text);text-decoration:none;font-weight:600;border:1px solid var(--border)}
+
+    /* Proof strip */
+    .proof{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+    .stat{border:1px solid var(--border);background:var(--panel);border-radius:18px;padding:16px}
+    .stat b{display:block;font-family:var(--font-head);font-size:3rem;font-weight:800;color:var(--brand-2);line-height:1.1}
+    .stat b small{font-size:1rem;font-weight:600;margin-left:6px;color:var(--muted)}
+    .stat span{color:var(--muted);font-size:.95rem;line-height:1.4}
+
+    /* Cards */
+    .card{border:1px solid var(--border);background:var(--panel);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .12s ease, box-shadow .12s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .badge{font-size:.82rem;font-weight:600;padding:4px 10px;border:1px solid var(--border);border-radius:999px}
+
 
     /* Controls */
-    .controls{display:grid;gap:10px;grid-template-columns:1fr;margin:26px 0 8px}
-    #q{width:100%;padding:12px 14px;border-radius:var(--radius);border:1px solid var(--border);background:var(--panel);color:var(--text)}
+    .controls{display:grid;gap:10px;grid-template-columns:1fr;margin:10px 0 14px}
+    #q{width:100%;padding:12px 14px;border-radius:var(--radius);border:1px solid var(--border);background:var(--panel);color:var(--text);font:inherit}
     .tag-bar{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:var(--panel);cursor:pointer}
-    .tag.active{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#062010;border-color:transparent}
-    .sort-row{display:flex;gap:10px;align-items:center}
-    select{padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:var(--text)}
+    .tag{padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:var(--panel);color:var(--text);cursor:pointer;font-family:inherit;font-weight:600;font-size:.92rem}
+    .tag.active{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#062010;border-color:transparent;font-weight:600}
+    .sort-row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .sort-row div{display:flex;gap:10px;align-items:center}
+    select{padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:var(--text);font:inherit}
+    #count{color:var(--muted);font-size:.9rem}
 
     /* Project cards */
     .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{border:1px solid var(--border);background:var(--panel);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .12s ease, box-shadow .12s ease}
-    .card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
     .card img{width:100%;aspect-ratio:16/9;object-fit:cover;background:linear-gradient(120deg, rgba(32,192,92,.15), rgba(65,212,138,.12))}
-    .card .content{padding:12px;display:grid;gap:6px}
-    .card .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem}
+    .card .content{padding:16px;display:grid;gap:6px;flex:1;align-content:start}
+    .card .meta{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;color:var(--muted);font-size:.9rem}
+    .card .meta strong{color:var(--text);font-family:var(--font-head);font-size:1.1rem;font-weight:800;line-height:1.3;letter-spacing:-.01em}
+    .card .meta span{font-weight:600;padding-top:3px}
+    .card .content p{margin:2px 0 4px;font-size:.98rem;line-height:1.6;color:var(--text);opacity:.88}
     .card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
-    .badge{font-size:.8rem;padding:4px 8px;border:1px solid var(--border);border-radius:999px}
     .card .actions{flex-wrap:wrap;margin-top:6px}
-    .project-visual{aspect-ratio:16/9;padding:16px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:linear-gradient(120deg,rgba(32,192,92,.12),rgba(65,212,138,.06));border-bottom:1px solid var(--border)}
-    .visual-heading{font-size:.85rem;font-weight:800;margin:0}
-    .visual-subtitle{font-size:.75rem;color:var(--muted);margin:0}
-    .mini-series{display:grid;grid-template-columns:38px 1fr;gap:8px;align-items:center;font-size:.75rem}
-    .mini-bars{display:grid;gap:5px}
-    .mini-bar{height:18px;border-radius:3px;font-size:.7rem;line-height:18px;color:#fff;padding-left:5px;min-width:42px}
-    .mini-bar.cutoff{background:#5c7b8b}.mini-bar.cff{background:#138047}
-    .mini-legend{display:flex;gap:14px;font-size:.7rem;color:var(--muted)}
-    .mini-legend i{display:inline-block;width:8px;height:8px;margin-right:4px;border-radius:2px}
-    .process-strip{display:grid;gap:8px;grid-template-columns:1fr 1fr 1fr;align-items:stretch}
-    .process-step{border:1px solid var(--border);background:var(--panel);border-radius:9px;padding:9px 6px;text-align:center;font-size:.72rem;line-height:1.4;display:grid;align-items:center}
-    .process-step span{display:block;color:var(--muted);font-size:.65rem;margin-bottom:4px}
-    #experience{margin-top:32px}
-    .experience-card{padding:22px;margin-bottom:18px}
-    .experience-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-    .experience-header h3{margin:0;font-size:1.15rem}
-    .experience-role{margin:5px 0 0;color:var(--brand-2);font-weight:600}
-    .experience-year{color:var(--muted);white-space:nowrap}
-    .experience-card p,.experience-card li{font-size:.95rem}
-    .experience-card ul{padding-left:20px;margin-top:6px}
-    .experience-card li{margin:7px 0}
-    .experience-tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+    .org{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 16px;background:color-mix(in srgb,var(--h) 16%,var(--panel));border-bottom:1px solid color-mix(in srgb,var(--h) 40%,var(--border));border-left:5px solid var(--h)}
+    .org b{font-family:var(--font-head);font-weight:800;font-size:.98rem;display:flex;align-items:center;gap:8px}
+    .org b::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--h)}
+    .org span{font-size:.88rem;font-weight:600;color:var(--muted)}
+    .org.none{display:none}
+    .featured-flag{display:inline-block;font-size:.75rem;font-weight:700;color:#062010;background:linear-gradient(135deg,var(--brand),var(--brand-2));padding:3px 9px;border-radius:999px;width:max-content}
+    .empty{grid-column:1/-1;padding:24px;border:1px dashed var(--border);border-radius:18px;color:var(--muted);text-align:center}
+
+    /* Skills */
+    .skill-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .skill-panel{padding:18px 20px;display:none}
+    .skill-panel.show{display:block}
+    .skill-panel p{margin:0 0 12px;color:var(--muted)}
+    .skill-list{display:flex;gap:8px;flex-wrap:wrap}
+    .skill-list span{padding:8px 14px;border-radius:999px;background:var(--chip);border:1px solid var(--border);font-weight:600;font-size:.97rem}
 
     /* Modal */
     dialog.modal{border:none;border-radius:20px;padding:0;max-width:820px;width:95%;background:var(--panel);color:var(--text)}
@@ -97,310 +121,243 @@
     .modal-footer{border-top:1px solid var(--border);border-bottom:none;display:flex;gap:8px}
     .modal-body{padding:16px;display:grid;gap:10px}
 
-    /* ✅ Achievements — compact cards like the screenshot */
-    #achievements { margin-top: 28px; }
-    .ach-list{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
-    }
-    .ach-card{
-      border:1px solid var(--border);
-      background:var(--panel);
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      transition:transform .12s ease, box-shadow .12s ease;
-    }
-    .ach-card:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 14px 40px rgba(0,0,0,.25);
-    }
-    .ach-card > img{
-      width:100%;
-      height:190px;             /* large header image */
-      object-fit:cover;
-      display:block;
-    }
-    .ach-card .body{
-      padding:14px;
-      display:grid;
-      gap:10px;
-    }
-    .ach-meta{
-      font-size:.92rem;
-      color:var(--muted);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-top:-2px;
-    }
-    .ach-title{
-      font-size:1rem;
-      font-weight:800;
-      color:var(--text);
-    }
-    .ach-note{
-      margin:0;
-      font-size:.95rem;
-      color:var(--text);
-    }
-    .ach-thumbs{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:8px;
-    }
-    .ach-thumbs img{
-      width:100%;
-      height:64px;
-      object-fit:cover;
-      border-radius:10px;
-      border:1px solid var(--border);
-    }
+    /* Achievements */
+    .ach-list{display:grid;grid-template-columns:repeat(3, 1fr);gap:18px}
+    .ach-card{border:1px solid var(--border);background:var(--panel);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:transform .12s ease, box-shadow .12s ease}
+    .ach-card:hover{transform: translateY(-2px);box-shadow: 0 14px 40px rgba(0,0,0,.25)}
+    .ach-card > img{width:100%;height:190px;object-fit:cover;display:block}
+    .ach-card .body{padding:14px;display:grid;gap:10px}
+    .ach-meta{font-size:.92rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:-2px}
+    .ach-title{font-family:var(--font-head);font-size:1.05rem;font-weight:800;color:var(--text)}
+    .ach-note{margin:0;font-size:.95rem}
+    .ach-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .ach-thumbs img{width:100%;height:64px;object-fit:cover;border-radius:10px;border:1px solid var(--border)}
 
-    /* Footer and helpers */
+    /* Contact */
+    .contact-card{padding:20px;display:grid;gap:10px}
+    .contact-card p{margin:0}
+    .contact-card a{color:var(--brand-2)}
+    .contact-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+
     .site-footer{border-top:1px solid var(--border);margin-top:40px;color:var(--muted)}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--brand);color:#062010;font-weight:700;padding:10px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:50}
+    #toast.show{opacity:1;transform:translateX(-50%)}
 
-    /* Title entrance animation */
-    @keyframes titlePop {
-      0% { opacity: 0; transform: translateY(12px) scale(0.98); filter: blur(2px); }
-      60% { opacity: 1; transform: translateY(0) scale(1.005); filter: blur(0); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    #intro-title { animation: titlePop .9s cubic-bezier(.2,.7,.2,1) both; }
+    /* Title entrance animation (single page-load moment) */
+    @keyframes titlePop{0%{opacity:0;transform:translateY(12px) scale(.98);filter:blur(2px)}60%{opacity:1;transform:translateY(0) scale(1.005);filter:blur(0)}100%{opacity:1;transform:translateY(0) scale(1)}}
+    #intro-title{animation:titlePop .9s cubic-bezier(.2,.7,.2,1) both}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr 1fr}.ach-list{grid-template-columns:1fr 1fr}}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.hero-img{max-width:260px}.project-grid{grid-template-columns:1fr 1fr}.ach-list{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr 1fr}.nav-links{display:none}}
     @media (max-width:600px){.project-grid{grid-template-columns:1fr}.ach-list{grid-template-columns:1fr}}
+    @media print{.header-wrap,.controls,#themeToggle,.site-footer{display:none}}
   </style>
 </head>
 <body>
-  <header class="site-header container">
-    <div class="brand">
-      <div class="avatar" aria-hidden="true">DD</div>
-      <div>
-        <h1 id="site-title">Dorra Dhibi</h1>
-        <p class="subtitle">Industrial Biology Engineer • LCA & Sustainability</p>
+  <div class="header-wrap">
+    <header class="site-header container">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">DD</div>
+        <div>
+          <h1 id="site-title">Dorra Dhibi</h1>
+          <p class="subtitle">LCA &amp; Sustainability Engineer</p>
+        </div>
       </div>
-    </div>
-    <nav class="actions">
-      <button id="themeToggle" class="btn" aria-label="Toggle dark mode">🌓</button>
-      <a href="#contact" class="btn primary">Contact</a>
-      <a href="https://drive.google.com/file/d/19EGFhN1OkaTM4Yn-C288hKFkHgHsXuqS/view" target="_blank" rel="noopener" class="btn">Résumé</a>
-    </nav>
-  </header>
+      <nav class="actions" aria-label="Main">
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#achievements">Achievements</a>
+        </div>
+        <button id="themeToggle" class="btn" aria-label="Toggle dark mode">🌓</button>
+        <a href="#contact" class="btn primary">Contact</a>
+        <a href="https://drive.google.com/file/d/1Cuhad2gUtA8dmDV2cTe0i03hAhsWHwzl/view" target="_blank" rel="noopener" class="btn">CV</a>
+      </nav>
+    </header>
+  </div>
 
   <main class="container">
     <!-- Hero -->
-    <section class="hero" aria-labelledby="intro-title">
+    <section class="hero" aria-labelledby="intro-title" style="margin-top:30px">
       <div>
-        <h2 id="intro-title">I analyze & optimize products through LCA.</h2>
-        <p><strong>Welcome to Dorra's Portfolio – Where Environmental Engineering Meets Innovation.</strong><br/>Why hire me? Because I take initiative, lead by example, self-learn fast, and leave a positive impact in every project. I'm an Industrial Biology Engineer turning complex environmental challenges into sustainable solutions—from LCAs achieving up to <strong>38% GHG reductions</strong> to award-winning work in AI and climate policy.</p>
-        <div class="quick-links">
-          <a class="chip" href="#skills">Skills</a>
-          <a class="chip" href="#projects">Projects</a>
-          <a class="chip" href="#experience">Experience</a>
-          <a class="chip" href="#achievements">Achievements</a>
+        <span class="avail"><i></i>Open to LCA engineer roles</span>
+        <h2 id="intro-title">LCA &amp; Sustainability Engineer | Circular Economy, Bio-based Systems &amp; GHG Modelling</h2>
+        <p class="lead">Specialized in prospective and comparative LCA, PEF/CFF, scenario modelling and sensitivity analysis. Built and delivered 8 LCA projects across compost, bio-based materials, biofuels and bioplastics, translating early-stage data into hotspots, scale-up scenarios and actionable recommendations.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://drive.google.com/file/d/1Cuhad2gUtA8dmDV2cTe0i03hAhsWHwzl/view" target="_blank" rel="noopener">View my CV</a>
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn" href="#contact">Get in touch</a>
         </div>
       </div>
-      <!-- Your hero photo lives in the repo root -->
       <img class="hero-img" src="portrait.jpg" alt="Portrait of Dorra Dhibi" />
     </section>
 
-    <!-- Controls -->
-    <section class="controls" aria-label="Filters and search">
-      <input type="search" id="q" placeholder="Search projects (title, desc, tech)..." aria-label="Search projects" />
-      <div id="tagBar" class="tag-bar" role="list" aria-label="Filter by tag"></div>
-      <div class="sort-row">
-        <label for="sort">Sort by:</label>
-        <select id="sort" aria-label="Sort projects">
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="az">A → Z</option>
-          <option value="za">Z → A</option>
-        </select>
-      </div>
-    </section>
+    <!-- Proof strip -->
+    <div class="proof" aria-label="Highlights">
+      <div class="stat"><b><span data-count="8">8</span></b><span>LCA projects completed</span></div>
+      <div class="stat"><b><span data-count="7">7</span></b><span>of them prospective LCA</span></div>
+      <div class="stat"><b><span data-count="16">16</span><small>months</small></b><span>of hands-on LCA experience</span></div>
+      <div class="stat"><b><span data-count="3">3</span></b><span>organisations: Attero, SPAAK, Carbon Jar</span></div>
+    </div>
 
-    <!-- Projects Grid -->
-    <section id="projects" class="grid" aria-labelledby="projects-title">
-      <h2 id="projects-title" class="sr-only">Projects</h2>
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <p class="lead" style="margin-top:-6px">8 LCA projects, 7 of them prospective, plus process-design work.</p>
+      <div class="controls" role="search" aria-label="Filters and search">
+        <input type="search" id="q" placeholder="Search projects, organisations or tools..." aria-label="Search projects" />
+        <div id="tagBar" class="tag-bar" role="list" aria-label="Filter by tag"></div>
+        <div class="sort-row">
+          <div>
+            <label for="sort">Sort by:</label>
+            <select id="sort" aria-label="Sort projects">
+              <option value="featured">Featured</option>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="az">A → Z</option>
+              <option value="za">Z → A</option>
+            </select>
+          </div>
+          <span id="count" aria-live="polite"></span>
+        </div>
+      </div>
       <div id="projectGrid" class="project-grid" aria-live="polite"></div>
     </section>
 
-    <!-- Modal for project details -->
+    <!-- Modal -->
     <dialog id="projectModal" aria-labelledby="modalTitle" class="modal">
       <form method="dialog" class="modal-inner">
-        <header class="modal-header">
-          <h3 id="modalTitle">Project title</h3>
-        </header>
+        <header class="modal-header"><h3 id="modalTitle">Project title</h3></header>
         <div id="modalBody" class="modal-body"></div>
-        <footer class="modal-footer">
-          <button value="close" class="btn">Close</button>
-        </footer>
+        <footer class="modal-footer"><button value="close" class="btn">Close</button></footer>
       </form>
     </dialog>
 
-    <!-- Professional experience -->
-    <section id="experience" aria-labelledby="experience-title">
-      <h2 id="experience-title">Experience</h2>
-      <article class="card experience-card">
-        <div class="experience-header">
-          <div>
-            <h3>Attero — Netherlands</h3>
-            <p class="experience-role">Graduation Thesis Internship · Compost Life Cycle Assessment</p>
-          </div>
-          <span class="experience-year">2026</span>
-        </div>
-        <p>Completed my graduation thesis project during an internship at Attero, a Dutch waste treatment company. My research examined how the Circular Footprint Formula (CFF) affects the environmental footprint assigned to compost produced from green waste and GFT / biowaste.</p>
-        <ul>
-          <li>Modelled compost environmental impacts using openLCA, ecoinvent 3.12 and Environmental Footprint 3.1.</li>
-          <li>Compared CFF scenarios with cut-off and explored allocation, primary-reference burdens, quality factors and process sensitivity.</li>
-          <li>Developed an interactive dashboard to communicate the thesis results and let users explore their own process assumptions.</li>
-        </ul>
-        <div class="experience-tools" aria-label="Attero thesis methods and tools">
-          <span class="badge">Graduation thesis</span><span class="badge">Compost LCA</span><span class="badge">CFF</span><span class="badge">openLCA</span><span class="badge">EF 3.1</span>
-        </div>
-        <div class="quick-links">
-          <a class="btn primary" href="https://compost-cff-dashboard.sadosa.chatgpt.site" target="_blank" rel="noopener">Explore my thesis dashboard</a>
-        </div>
-      </article>
-      <article class="card experience-card">
-        <div class="experience-header">
-          <div>
-            <h3>SPAAK Circular Solutions</h3>
-            <p class="experience-role">Prospective Life Cycle Assessment</p>
-          </div>
-          <span class="experience-year">2026</span>
-        </div>
-        <p>Assessed the potential environmental performance of emerging circular and bio-based technologies before industrial deployment, translating process data into future production scenarios.</p>
-        <ul>
-          <li>Developed foreground inventories and scale-up scenarios for banana-leaf-derived superabsorbent hydrogel and a biofumigant made from brewer's spent grain.</li>
-          <li>Compared the proposed routes with fossil-based superabsorbent polymers and conventional fumigants.</li>
-          <li>Evaluated environmental hotspots and scenario choices, including solvent recovery and alternative heat sources, to support process-development decisions.</li>
-        </ul>
-        <div class="experience-tools" aria-label="SPAAK methods and tools">
-          <span class="badge">Prospective LCA</span><span class="badge">openLCA</span><span class="badge">ecoinvent</span><span class="badge">ReCiPe 2016</span><span class="badge">Scale-up scenarios</span>
-        </div>
-      </article>
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div class="skill-tabs" role="tablist" aria-label="Skill areas"></div>
+      <div id="skillPanels"></div>
     </section>
 
     <!-- Achievements -->
-    <section id="achievements" class="container" aria-labelledby="achievements-title">
+    <section id="achievements" aria-labelledby="achievements-title">
       <h2 id="achievements-title">Achievements</h2>
       <div class="ach-list">
-        <!-- SUSI -->
         <article class="ach-card">
           <img src="susi1.jpg" alt="SUSI EE 2024 main" />
           <div class="body">
             <div class="ach-meta"><strong class="ach-title">SUSI EE Participant</strong><span>2024</span></div>
             <p class="ach-note">Selected (1 of 4 / ~1,000 applicants), U.S. Dept. of State.</p>
-            <div class="ach-thumbs">
-              <img src="susi2.jpg" alt="" />
-              <img src="susi3.jpg" alt="" />
-              <img src="susi5.jpg" alt="" />
-            </div>
+            <div class="ach-thumbs"><img src="susi2.jpg" alt="" /><img src="susi3.jpg" alt="" /><img src="susi5.jpg" alt="" /></div>
           </div>
         </article>
-
-        <!-- JCI Awards -->
         <article class="ach-card">
           <img src="reward.jpg" alt="JCI INSAT awards main" />
           <div class="body">
-            <div class="ach-meta"><strong class="ach-title">Best Prospective & Exceptional Member — JCI INSAT</strong><span>2024</span></div>
+            <div class="ach-meta"><strong class="ach-title">Best Prospective &amp; Exceptional Member — JCI INSAT</strong><span>2024</span></div>
             <p class="ach-note">Recognized for leadership, dedication, and impact.</p>
-            <div class="ach-thumbs">
-              <img src="reward12.jpg" alt="" />
-              <img src="reward33.jpg" alt="" />
-            </div>
+            <div class="ach-thumbs"><img src="reward12.jpg" alt="" /><img src="reward33.jpg" alt="" /></div>
           </div>
         </article>
-
-        <!-- Hackathon -->
         <article class="ach-card">
           <img src="hack.jpg" alt="AI Hackathon main" />
           <div class="body">
             <div class="ach-meta"><strong class="ach-title">1st — Business AI Hackathon</strong><span>2025</span></div>
-            <p class="ach-note">Led plan & pitch for an AI-driven solution.</p>
-            <div class="ach-thumbs">
-              <img src="hack2.jpg" alt="" />
-            </div>
+            <p class="ach-note">Led plan &amp; pitch for an AI-driven solution.</p>
+            <div class="ach-thumbs"><img src="hack2.jpg" alt="" /></div>
           </div>
         </article>
-
-        <!-- Debate -->
         <article class="ach-card">
           <img src="debates.jpg" alt="Debate competition main" />
           <div class="body">
             <div class="ach-meta"><strong class="ach-title">1st — Debate Competition</strong><span>2025</span></div>
             <p class="ach-note">Public speaking, critical thinking, teamwork.</p>
-            <div class="ach-thumbs">
-              <img src="debates2.jpg" alt="" />
-              <img src="debates4.jpg" alt="" />
-            </div>
+            <div class="ach-thumbs"><img src="debates2.jpg" alt="" /><img src="debates4.jpg" alt="" /></div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Contact (your details) -->
-    <section id="contact" class="contact container" aria-labelledby="contact-title">
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
-      <div class="card" style="padding:16px;">
+      <div class="card contact-card">
+        <p>Hiring for an LCA engineer role? I'd be glad to talk.</p>
         <p><strong>Email:</strong> <a href="mailto:dhibidorra@gmail.com">dhibidorra@gmail.com</a></p>
         <p><strong>Phone:</strong> <a href="tel:+21650822174">+216 50 822 174</a></p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dhibi-dorra/" target="_blank" rel="noopener">linkedin.com/in/dhibi-dorra</a></p>
+        <div class="contact-row">
+          <a class="btn primary" href="mailto:dhibidorra@gmail.com?subject=LCA%20engineer%20opportunity">Send an email</a>
+          <button class="btn" id="copyEmail" type="button">Copy email</button>
+          <a class="btn" href="https://drive.google.com/file/d/1Cuhad2gUtA8dmDV2cTe0i03hAhsWHwzl/view" target="_blank" rel="noopener">View CV</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer container">
-    <small>© <span id="year"></span> Dorra Dhibi — Green & clean 🌿</small>
+    <small>© <span id="year"></span> Dorra Dhibi — Green &amp; clean 🌿</small>
   </footer>
+  <div id="toast" role="status">Email copied</div>
 
   <script>
+    const ORG = {
+      ATTERO:{name:"Attero · BVOR", short:"Attero", place:"Netherlands", hue:"#20c05c"},
+      SPAAK:{name:"SPAAK Circular Solutions", short:"SPAAK", place:"Netherlands", hue:"#2bb3c0"},
+      CJ:{name:"Carbon Jar", short:"Carbon Jar", place:"Tunisia", hue:"#e0a526"},
+      INSAT:{name:"INSAT", short:"INSAT", place:"Tunisia", hue:"#9a7be0"}
+    };
     const PROJECTS = [
-      { id:"compost-cff-dashboard", title:"Graduation Thesis — Compost CFF Dashboard at Attero", year:2026, tags:["LCA","Circular Economy","Thesis Project","Interactive Tool"], tech:["openLCA","ecoinvent 3.12","EF 3.1","python","javascript","excel","powerbi"], description:"My graduation thesis project at Attero, a Dutch waste treatment company: exploring compost footprints with CFF, cut-off and sensitivity analysis.", long:"Developed as part of my graduation thesis project during my internship at Attero, a Dutch waste treatment company. The research examined the application of the Circular Footprint Formula to compost produced from green waste and GFT / biowaste, comparing it with cut-off and exploring key methodological and process assumptions. This dashboard translates the thesis models into an interactive tool: users can enter process inputs and feedstock composition, compare scenarios, and explore all 16 EF 3.1 parent impact categories. Scenario assumptions and study reference data remain visible.", highlights:["Graduation thesis internship at Attero — Dutch waste treatment company","CFF versus cut-off for green-waste and GFT compost","Editable process inputs and comparisons across 16 EF 3.1 impact categories","Hotspot charts, sensitivity curves, tornado ranking and CSV export"], demo:"https://compost-cff-dashboard.sadosa.chatgpt.site", demoLabel:"Open dashboard", modalDemoLabel:"Open dashboard", image:"cff.png" },
-      { id:"spaak-hydrogel-prospective-lca", title:"Prospective LCA of Banana-Leaf Superabsorbent Hydrogel", year:2026, tags:["LCA","Prospective LCA","Circular Economy"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scenario modelling"], description:"SPAAK Circular Solutions: assessing a banana-leaf-derived hydrogel against fossil-based superabsorbent polymers.", long:"Conducted prospective LCA of a route converting banana-leaf residues into cellulose, carboxymethyl cellulose (CMC) and superabsorbent hydrogel. Modelled industrial-scale scenarios and compared the proposed material with fossil-based superabsorbent polymers. The assessment explored environmental hotspots and process options before industrial deployment.", highlights:["Foreground inventory development and industrial scale-up scenarios","Benchmark comparison with fossil-based superabsorbent polymers","Acetic-acid and ethanol recovery scenarios","Alternative heat sources and environmental hotspot analysis"], image:"hydrogel.png" },
-      { id:"spaak-biofumigant-prospective-lca", title:"Prospective LCA of a Brewer's Spent Grain Biofumigant", year:2026, tags:["LCA","Prospective LCA","Bio-based Products"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scale-up modelling"], description:"SPAAK Circular Solutions: exploring future industrial production of a fermentation-based biofumigant from brewery residues.", long:"Assessed an early-stage biofumigant route using brewer's spent grain and fermentation. Built a prospective cradle-to-gate model for projected industrial production and benchmarked the route against phosphine and methyl bromide. Results were interpreted as scenario-dependent projections, with attention to data limitations and uncertainty.", highlights:["Goal and scope, functional unit and modular process inventories","Laboratory-to-industrial scale-up scenarios","Benchmarking against conventional fumigants","Hotspot analysis of energy, fermentation inputs and downstream processing"], image:"biofumigant.png" },
-      { id:"microalgae-biodiesel-lca", title:"Comparative LCA of Microalgae Biodiesel (PBR vs Raceway)", year:2025, tags:["LCA","Bioenergy","Research"], tech:["openLCA","Ecoinvent","Python"], description:"Photobioreactors vs. open raceway ponds—environmental tradeoffs for algae biodiesel.", long:"Compares cultivation/processing inventories for PBR vs ORP across scenarios...", highlights:["Scenario comparison (PBR vs ORP)","Hotspot analysis","Recommendations for energy inputs"], demo:"https://drive.google.com/file/d/1aBh45azVgrKT8o_I-0oFTAjDKnx1IOjH/view", image:"microalgae.png" },
-      { id:"pyrolysis-lca", title:"LCA of Biomass & Plastic Waste Pyrolysis", year:2025, tags:["LCA","Circular Economy","Energy"], tech:["openLCA","Python"], description:"Environmental assessment of pyrolysis for mixed biomass/plastics.", long:"Three scenarios—slow, fast, co-pyrolysis...", highlights:["Feedstock sensitivity","Co-product credits","Energy recovery mapping"], demo:"https://drive.google.com/file/d/1yG_I_2fzkLJwaKeiEFlAFRJgBlmYYZ4Z/view", image:"pyrolysis.png" },
-      { id:"levulinic-acid-uncertainty", title:"LCA under Uncertainty: Levulinic Acid (Bio vs Petro)", year:2025, tags:["LCA","Uncertainty","Chemistry"], tech:["openLCA","Monte Carlo","TEA"], description:"Bio-based vs petrochemical LA with sustainability, safety & TEA.", long:"Comparative LCA/TEA/safety framework...", highlights:["Monte Carlo propagation","Safety considerations","TEA integration"], demo:"https://drive.google.com/file/d/18IM9c6p5Of-J07kZaibXmKMmamFAKyjW/view", image:"levulinic.png" },
-      { id:"phenolics-docking-env", title:"Molecular Docking & Environmental Applications of Phenolics", year:2024, tags:["Computational","Chemistry","Env. Eng."], tech:["Docking","Python","R"], description:"Catechol, Kojic acid, L-DOPA, Gallic acid—binding insights with applied angles.", long:"Review + docking to catechol oxidase (PDB 1BUG)...", highlights:["Ligand panel","Scoring & validation","Applied interpretation"], demo:"https://drive.google.com/file/d/1DPAFFW-NcHDLbh5LpRudA8CQZAnmwqg9/view", image:"docking.png" },
-      { id:"carbon-neutral-jetfuel-lca", title:"Life Cycle Assessment of Carbon-Neutral Jet Fuel", year:2025, tags:["LCA","Aviation","Energy"], tech:["openLCA","Ecoinvent"], description:"HTL/HDO canola-meal pathway; hotspots and integration prospects.", long:"Comprehensive LCA of a biorefinery pathway...", highlights:["Upstream CO₂ sourcing","Energy demand hotspots","Offset boundaries"], demo:"https://drive.google.com/file/d/1fwRXczMo6qHlTwgFv0vo-2ARoAbnvLK1/view", image:"aviation.png" },
-      { id:"pla-phb-lca", title:"Comparative LCA of PLA vs PHB Bioplastics", year:2025, tags:["LCA","Bioplastics","Circular Economy"], tech:["openLCA"], description:"PLA vs PHB across stages; sensitivity & EOL.", long:"OAT + Monte-Carlo, EOL scenarios, MCDA...", highlights:["EOL scenarios","Fossil benchmarks","Sensitivity analysis"], image:"pla_phb.png" },
-      { id:"tmb-pipeline-melanoma", title:"Tumor Mutational Burden (TMB) Pipeline for Melanoma", year:2025, tags:["Bioinformatics","Pipeline"], tech:["BWA","Samtools","GATK4","R","Shiny"], description:"End-to-end workflow FASTQ→VCF with Shiny explorer.", long:"Automated QC, hg38 indexing, scripts...", repo:"https://github.com/Dorradhibi/Tumor-Mutation-Burden-TMB-Analysis-", image:"tmb.png" },
-      { id:"cosmetics-innovation-natural", title:"Cosmetic Innovations: Natural Ingredients & Functionality", year:2025, tags:["Research","Cosmetics","Sustainability"], tech:["Review","Evidence Synthesis"], description:"Which new naturals deliver real functional gains?", long:"Sun-care innovation: science, filters, formulation, testing...", demo:"https://drive.google.com/file/d/1Xf7fu1PqpQfhCMW_bW7EfIMmzTC6Tr1P/view", image:"cosmetics.png" }
+      { id:"compost-cff-dashboard", org:ORG.ATTERO, featured:true, title:"Graduation Thesis — Compost CFF Dashboard at Attero", year:2026, tags:["LCA","Circular Economy","Thesis Project","Interactive Tool"], tech:["openLCA","ecoinvent 3.12","EF 3.1","python","javascript","excel","powerbi"], description:"Graduation thesis at Attero: reviewing guidelines and solving a methodological problem in compost LCA, applying the CFF to compost to support BVOR in decision-making.", long:"My graduation thesis internship at Attero, a Dutch waste treatment company, reviewed the existing guidelines and addressed a methodological problem in compost LCA: how to apply the Circular Footprint Formula (CFF) to compost from green waste and GFT / biowaste, compared with the cut-off approach. The work supports BVOR in its decision-making on this product. The thesis models are also available as an interactive dashboard where users can enter process inputs and feedstock composition, compare scenarios and explore all 16 EF 3.1 parent impact categories.", highlights:["Review of guidelines for compost LCA","Methodological problem solved: applying the CFF to compost","Support for BVOR decision-making on compost","Interactive dashboard: CFF vs cut-off, sensitivity curves, tornado ranking, CSV export"], demo:"https://compost-cff-dashboard.sadosa.chatgpt.site", demoLabel:"Open dashboard", modalDemoLabel:"Open dashboard", image:"cff.png" },
+      { id:"spaak-hydrogel-prospective-lca", org:ORG.SPAAK, featured:true, title:"Prospective LCA of Banana-Leaf Superabsorbent Hydrogel", year:2026, tags:["LCA","Prospective LCA","Circular Economy"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scenario modelling"], description:"SPAAK Circular Solutions: assessing a banana-leaf-derived hydrogel against fossil-based superabsorbent polymers.", long:"Conducted prospective LCA of a route converting banana-leaf residues into cellulose, carboxymethyl cellulose (CMC) and superabsorbent hydrogel. Modelled industrial-scale scenarios and compared the proposed material with fossil-based superabsorbent polymers. The assessment explored environmental hotspots and process options before industrial deployment.", highlights:["Foreground inventory development and industrial scale-up scenarios","Benchmark comparison with fossil-based superabsorbent polymers","Acetic-acid and ethanol recovery scenarios","Alternative heat sources and environmental hotspot analysis"], image:"hydrogel.png" },
+      { id:"spaak-biofumigant-prospective-lca", org:ORG.SPAAK, featured:true, title:"Prospective LCA of a Brewer's Spent Grain Biofumigant", year:2026, tags:["LCA","Prospective LCA","Bio-based Products"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scale-up modelling"], description:"SPAAK Circular Solutions: exploring future industrial production of a fermentation-based biofumigant from brewery residues.", long:"Assessed an early-stage biofumigant route using brewer's spent grain and fermentation. Built a prospective cradle-to-gate model for projected industrial production and benchmarked the route against phosphine and methyl bromide. Results were interpreted as scenario-dependent projections, with attention to data limitations and uncertainty.", highlights:["Goal and scope, functional unit and modular process inventories","Laboratory-to-industrial scale-up scenarios","Benchmarking against conventional fumigants","Hotspot analysis of energy, fermentation inputs and downstream processing"], image:"biofumigant.png" },
+      { id:"carbon-neutral-jetfuel-lca", org:ORG.CJ, title:"Life Cycle Assessment of Carbon-Neutral Jet Fuel", year:2025, tags:["LCA","Aviation","Energy","Carbon Jar","Prospective LCA"], tech:["openLCA","Ecoinvent"], description:"HTL/HDO canola-meal pathway; hotspots and integration prospects.", long:"Comprehensive LCA of a biorefinery pathway...", highlights:["Upstream CO₂ sourcing","Energy demand hotspots","Offset boundaries"], demo:"https://drive.google.com/file/d/1fwRXczMo6qHlTwgFv0vo-2ARoAbnvLK1/view", image:"aviation.png" },
+      { id:"microalgae-biodiesel-lca", org:ORG.CJ, title:"Comparative LCA of Microalgae Biodiesel (PBR vs Raceway)", year:2025, tags:["LCA","Bioenergy","Research","Carbon Jar","Prospective LCA"], tech:["openLCA","Ecoinvent","Python"], description:"Photobioreactors vs. open raceway ponds—environmental tradeoffs for algae biodiesel.", long:"Compares cultivation/processing inventories for PBR vs ORP across scenarios...", highlights:["Scenario comparison (PBR vs ORP)","Hotspot analysis","Recommendations for energy inputs"], demo:"https://drive.google.com/file/d/1aBh45azVgrKT8o_I-0oFTAjDKnx1IOjH/view", image:"microalgae.png" },
+      { id:"pla-phb-lca", org:ORG.CJ, title:"Comparative LCA of PLA vs PHB Bioplastics", year:2025, tags:["LCA","Bioplastics","Circular Economy","Carbon Jar","Prospective LCA"], tech:["openLCA"], description:"PLA vs PHB across stages; sensitivity & EOL.", long:"OAT + Monte-Carlo, EOL scenarios, MCDA...", highlights:["EOL scenarios","Fossil benchmarks","Sensitivity analysis"], image:"pla_phb.png" },
+      { id:"levulinic-acid-uncertainty", org:ORG.CJ, title:"LCA under Uncertainty: Levulinic Acid (Bio vs Petro)", year:2025, tags:["LCA","Uncertainty","Chemistry","Carbon Jar","Prospective LCA"], tech:["openLCA","Monte Carlo","TEA"], description:"Bio-based vs petrochemical LA with sustainability, safety & TEA.", long:"Comparative LCA/TEA/safety framework...", highlights:["Monte Carlo propagation","Safety considerations","TEA integration"], demo:"https://drive.google.com/file/d/18IM9c6p5Of-J07kZaibXmKMmamFAKyjW/view", image:"levulinic.png" },
+      { id:"pyrolysis-lca", org:ORG.CJ, title:"LCA of Biomass & Plastic Waste Pyrolysis", year:2025, tags:["LCA","Circular Economy","Energy","Prospective LCA"], tech:["openLCA","Python"], description:"Environmental assessment of pyrolysis for mixed biomass/plastics.", long:"Three scenarios—slow, fast, co-pyrolysis...", highlights:["Feedstock sensitivity","Co-product credits","Energy recovery mapping"], demo:"https://drive.google.com/file/d/1yG_I_2fzkLJwaKeiEFlAFRJgBlmYYZ4Z/view", image:"pyrolysis.png" },
+      { id:"biochar-process-design", org:ORG.INSAT, title:"Biowaste Pyrolysis & Biochar System (Process Design)", tags:["Process Design","Circular Economy"], tech:["Aspen","Mass & energy balances","LCI"], description:"Process-flow diagrams and mass/energy balances for a biowaste pyrolysis route, translated into an LCA-ready inventory.", long:"Developed process-flow diagrams and mass/energy balance logic for a biowaste pyrolysis route with biochar, bio-oil and gas outputs. Modelled the process structure in Aspen and translated it into an LCA-ready inventory.", highlights:["Process-flow diagrams","Mass and energy balances","Aspen model to LCA-ready inventory"], image:"" },
+      { id:"steam-explosion-pilot", org:ORG.INSAT, title:"Biomass Steam-Explosion Pilot Plant", tags:["Process Design","Bio-based Products"], tech:["Process-flow diagrams","Mass & energy balances"], description:"Balance logic for biomass pretreatment and scale-up, with attention to foreground-data uncertainty.", long:"Developed process-flow diagrams and material/energy balance logic for biomass pretreatment and scale-up, with attention to foreground-data uncertainty and process integration.", highlights:["Pretreatment process-flow diagrams","Material and energy balances","Foreground-data uncertainty and process integration"], image:"" },
+      { id:"phenolics-docking-env", org:ORG.INSAT, title:"Molecular Docking & Environmental Applications of Phenolics", year:2024, tags:["Computational","Chemistry","Env. Eng."], tech:["Docking","Python","R"], description:"Catechol, Kojic acid, L-DOPA, Gallic acid—binding insights with applied angles.", long:"Review + docking to catechol oxidase (PDB 1BUG)...", highlights:["Ligand panel","Scoring & validation","Applied interpretation"], demo:"https://drive.google.com/file/d/1DPAFFW-NcHDLbh5LpRudA8CQZAnmwqg9/view", image:"docking.png" },
+      { id:"tmb-pipeline-melanoma", org:ORG.INSAT, title:"Tumor Mutational Burden (TMB) Pipeline for Melanoma", year:2025, tags:["Bioinformatics","Pipeline"], tech:["BWA","Samtools","GATK4","R","Shiny"], description:"End-to-end workflow FASTQ→VCF with Shiny explorer.", long:"Automated QC, hg38 indexing, scripts...", repo:"https://github.com/Dorradhibi/Tumor-Mutation-Burden-TMB-Analysis-", image:"tmb.png" },
+      { id:"cosmetics-innovation-natural", org:ORG.INSAT, title:"Cosmetic Innovations: Natural Ingredients & Functionality", year:2025, tags:["Research","Cosmetics","Sustainability"], tech:["Review","Evidence Synthesis"], description:"Which new naturals deliver real functional gains?", long:"Sun-care innovation: science, filters, formulation, testing...", demo:"https://drive.google.com/file/d/1Xf7fu1PqpQfhCMW_bW7EfIMmzTC6Tr1P/view", image:"cosmetics.png" }
     ];
 
-    const state={projects:PROJECTS,activeTags:new Set(),q:"",sort:"newest"};
+    const SKILLS = [
+      { name:"Assessment", blurb:"Methods I apply to move from goal and scope to defensible results.", items:["Prospective LCA","Comparative LCA","ISO 14040/44","PEF / CFF logic","LCI / LCIA","Allocation","System expansion","Substitution","Scenario analysis","Sensitivity & uncertainty analysis"] },
+      { name:"Circular systems", blurb:"Industrial ecology and resource-strategy modelling.", items:["Material-flow logic","Waste & recycling systems","Secondary-material modelling","Circular economy strategies","Feedstock-quality assumptions","Co-product handling"] },
+      { name:"Process & data modelling", blurb:"Turning process knowledge into LCA-ready inventories.", items:["Process-flow diagrams","Mass & energy balances","Foreground inventory development","Technology comparison","Excel-based calculators","Quantitative interpretation"] },
+      { name:"Tools", blurb:"Software and data sources I work with.", items:["openLCA","ecoinvent","EF methods","Excel","Aspen","Python","R","LaTeX","Data cleaning","Visualisation","Literature-based inventories"] },
+      { name:"Languages", blurb:"Working languages.", items:["Arabic (native)","English (C1)","French (C1)"] }
+    ];
+
+    PROJECTS.forEach(p=>{ if(p.org && !p.tags.includes(p.org.short)) p.tags.push(p.org.short); });
+    function orgBanner(p){ return p.org?`<div class="org" style="--h:${p.org.hue}"><b>${p.org.name}</b><span>${p.org.place}</span></div>`:""; }
+    const state={projects:PROJECTS,activeTags:new Set(),q:"",sort:"featured"};
     const els={
-      grid:document.getElementById("projectGrid"),
-      q:document.getElementById("q"),
-      sort:document.getElementById("sort"),
-      tagBar:document.getElementById("tagBar"),
-      modal:document.getElementById("projectModal"),
-      modalTitle:document.getElementById("modalTitle"),
-      modalBody:document.getElementById("modalBody"),
-      themeToggle:document.getElementById("themeToggle"),
+      grid:document.getElementById("projectGrid"), q:document.getElementById("q"), sort:document.getElementById("sort"),
+      tagBar:document.getElementById("tagBar"), modal:document.getElementById("projectModal"),
+      modalTitle:document.getElementById("modalTitle"), modalBody:document.getElementById("modalBody"),
+      themeToggle:document.getElementById("themeToggle"), count:document.getElementById("count")
     };
 
+    /* Theme + year */
     (function initTheme(){
-      const saved=localStorage.getItem("theme");
+      let saved=null; try{saved=localStorage.getItem("theme");}catch(e){}
       if(saved==="light") document.documentElement.classList.add("light");
       document.getElementById("year").textContent=new Date().getFullYear();
       els.themeToggle.addEventListener("click",()=>{
         document.documentElement.classList.toggle("light");
-        localStorage.setItem("theme", document.documentElement.classList.contains("light")?"light":"dark");
+        try{localStorage.setItem("theme", document.documentElement.classList.contains("light")?"light":"dark");}catch(e){}
       });
     })();
 
+    /* Tag bar */
     (function buildTagBar(data){
-      const all=new Set(); data.forEach(p=>p.tags.forEach(t=>all.add(t)));
-      const tags=Array.from(all).sort((a,b)=>a.localeCompare(b));
-      els.tagBar.innerHTML="";
-      tags.forEach(tag=>{
-        const btn=document.createElement("button"); btn.className="tag"; btn.textContent=tag; btn.role="listitem";
+      ["Attero","SPAAK","Carbon Jar","INSAT","Prospective LCA","Circular Economy","Process Design"].forEach(tag=>{
+        const btn=document.createElement("button"); btn.className="tag"; btn.type="button"; btn.textContent=tag; btn.setAttribute("role","listitem");
         btn.addEventListener("click",()=>{
           if(state.activeTags.has(tag)) state.activeTags.delete(tag); else state.activeTags.add(tag);
           btn.classList.toggle("active"); updateHash(); render();
@@ -412,42 +369,36 @@
     els.q.addEventListener("input",e=>{state.q=e.target.value.toLowerCase().trim();updateHash();render();});
     els.sort.addEventListener("change",e=>{state.sort=e.target.value;updateHash();render();});
 
-    function projectVisual(p){
-      if(p.visual==="cff") return `<div class="project-visual" role="img" aria-label="Study S2 climate results in kg CO2-equivalent per tonne compost: Green Waste cut-off 166.3, CFF 132.3; GFT cut-off 165.6, CFF 86.2.">
-        <p class="visual-heading">CFF vs cut-off</p><p class="visual-subtitle">Study S2 · kg CO₂-eq / t compost</p>
-        ${[["GW",166.3,132.3],["GFT",165.6,86.2]].map(([name,cutoff,cff])=>`<div class="mini-series"><strong>${name}</strong><div class="mini-bars"><div class="mini-bar cutoff" style="width:${cutoff/180*100}%">${cutoff}</div><div class="mini-bar cff" style="width:${cff/180*100}%">${cff}</div></div></div>`).join("")}
-        <div class="mini-legend"><span><i style="background:#5c7b8b"></i>Cut-off</span><span><i style="background:#138047"></i>CFF</span></div></div>`;
-      if(p.visual==="hydrogel" || p.visual==="biofumigant"){
-        const steps=p.visual==="hydrogel"?["Banana-leaf residues","Cellulose & CMC","Superabsorbent hydrogel"]:["Brewer's spent grain","Fermentation","Biofumigant"];
-        return `<div class="project-visual" role="img" aria-label="${steps.join(' to ')}. Prospective life cycle assessment at SPAAK."><p class="visual-heading">Prospective LCA · SPAAK</p><div class="process-strip">${steps.map((label,i)=>`<div class="process-step"><span>Stage ${i+1}</span>${label}</div>`).join("")}</div><p class="visual-subtitle">Inventory · Scale-up scenarios · Hotspots</p></div>`;
-      }
-      return "";
+    function placeholder(title){
+      return "data:image/svg+xml;utf8," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='#20c05c'/><stop offset='100%' stop-color='#7ce2a8'/></linearGradient></defs><rect width='1200' height='675' fill='url(#g)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='44' fill='white'>${title.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</text></svg>`);
     }
 
     function render(){
       const {projects,activeTags,q,sort}=state;
       let list=projects.filter(p=>{
         const matchTags=activeTags.size===0||Array.from(activeTags).every(t=>p.tags.includes(t));
-        const hay=(p.title+" "+p.description+" "+(p.tech||[]).join(" ")).toLowerCase();
-        const matchQ=!q||hay.includes(q);
-        return matchTags&&matchQ;
+        const hay=(p.title+" "+p.description+" "+(p.org?p.org.name+" "+p.org.place:"")+" "+(p.tech||[]).join(" ")).toLowerCase();
+        return matchTags&&(!q||hay.includes(q));
       });
       if(sort==="newest") list.sort((a,b)=>(b.year||0)-(a.year||0));
       if(sort==="oldest") list.sort((a,b)=>(a.year||0)-(b.year||0));
       if(sort==="az") list.sort((a,b)=>a.title.localeCompare(b.title));
       if(sort==="za") list.sort((a,b)=>b.title.localeCompare(a.title));
 
+      els.count.textContent=`${list.length} of ${projects.length} projects`;
       els.grid.innerHTML="";
+      if(!list.length){ els.grid.innerHTML=`<div class="empty">No project matches. Clear a tag or search term to see more.</div>`; return; }
       list.forEach(p=>{
         const card=document.createElement("article"); card.className="card";
-        const imgSrc = p.image && p.image.trim() ? p.image
-          : "data:image/svg+xml;utf8," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2320c05c'/><stop offset='100%' stop-color='%237ce2a8'/></linearGradient></defs><rect width='1200' height='675' fill='url(%23g)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='44' fill='white'>${p.title}</text></svg>`);
+        const imgSrc=p.image&&p.image.trim()?p.image:placeholder(p.title);
         card.innerHTML=`
-          ${projectVisual(p)||`<img src="${imgSrc}" alt="${p.title} image" />`}
+          ${orgBanner(p)}
+          <img src="${imgSrc}" alt="${p.title} image" loading="lazy" onerror="this.onerror=null;this.src='${placeholder(p.title).replace(/'/g,"%27")}'" />
           <div class="content">
+            ${p.featured?`<span class="featured-flag">Featured</span>`:""}
             <div class="meta"><strong>${p.title}</strong><span>${p.year||""}</span></div>
             <p>${p.description}</p>
-            <div class="tags">${(p.tags||[]).map(t=>`<span class="badge">${t}</span>`).join("")}</div>
+            <div class="tags">${(p.tags||[]).filter(t=>t!=="LCA"&&(!p.org||t!==p.org.short)).slice(0,2).map(t=>`<span class="badge">${t}</span>`).join("")}</div>
             <div class="actions">
               ${p.demo?`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">${p.demoLabel||"Demo"}</a>`:""}
               ${p.repo?`<a class="btn" href="${p.repo}" target="_blank" rel="noopener">Code</a>`:""}
@@ -461,51 +412,98 @@
 
     function openModal(p){
       els.modalTitle.textContent=p.title;
-      const imgSrc=p.image&&p.image.trim()?p.image:
-        "data:image/svg+xml;utf8,"+encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2320c05c'/><stop offset='100%' stop-color='%237ce2a8'/></linearGradient></defs><rect width='1200' height='675' fill='url(%23g)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='44' fill='white'>${p.title}</text></svg>`);
+      const imgSrc=p.image&&p.image.trim()?p.image:placeholder(p.title);
       els.modalBody.innerHTML=`
-        ${projectVisual(p)||`<img src="${imgSrc}" alt="${p.title} image" style="width:100%;border-radius:12px;border:1px solid var(--border);" />`}
+        ${p.org?`<div class="org" style="--h:${p.org.hue};border-radius:12px"><b>${p.org.name}</b><span>${p.org.place}</span></div>`:""}
+        <img src="${imgSrc}" alt="${p.title} image" style="width:100%;border-radius:12px;border:1px solid var(--border);" />
         <p>${p.long||p.description}</p>
         ${p.highlights?.length?`<ul>${p.highlights.map(h=>`<li>${h}</li>`).join("")}</ul>`:""}
-        ${p.tech?.length?`<p><strong>Tech:</strong> ${p.tech.join(", ")}</p>`:""}
+        ${p.tech?.length?`<p><strong>Tools &amp; methods:</strong> ${p.tech.join(", ")}</p>`:""}
         <div class="actions">
           ${p.demo?`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">${p.modalDemoLabel||"Live Demo"}</a>`:""}
           ${p.repo?`<a class="btn" href="${p.repo}" target="_blank" rel="noopener">Repository</a>`:""}
         </div>`;
       const params=new URLSearchParams(location.hash.replace(/^#/,""));
-      params.set("project", encodeURIComponent(p.id));
-      location.hash="#"+params.toString();
-      els.modal.showModal();
-      els.modal.addEventListener("close",()=>{
-        const p2=new URLSearchParams(location.hash.replace(/^#/,"")); p2.delete("project");
-        location.hash=p2.toString()?"#"+p2.toString():"";
-      },{once:true});
+      params.set("project", p.id);
+      history.replaceState(null,"","#"+params.toString());
+      if(!els.modal.open) els.modal.showModal();
     }
+    els.modal.addEventListener("close",()=>{
+      const p2=new URLSearchParams(location.hash.replace(/^#/,"")); p2.delete("project");
+      history.replaceState(null,"", p2.toString()?"#"+p2.toString():"#");
+    });
 
     function applyURLHash(){
-      const params=new URLSearchParams(location.hash.replace(/^#/,""));
-      state.q=params.get("q")||""; state.sort=params.get("sort")||"newest";
+      const raw=location.hash.replace(/^#/,"");
+      if(!raw.includes("=")) return; // plain section anchors (#projects etc.) are left alone
+      const params=new URLSearchParams(raw);
+      state.q=params.get("q")||""; state.sort=params.get("sort")||"featured";
+      els.q.value=state.q; els.sort.value=state.sort;
       const tags=params.get("tags"); const project=params.get("project");
-      document.getElementById("q").value=state.q; document.getElementById("sort").value=state.sort;
       if(tags){state.activeTags=new Set(tags.split(",").filter(Boolean)); syncActiveTagButtons();}
-      if(project){const p=state.projects.find(x=>x.id===decodeURIComponent(project)); if(p) openModal(p);}
+      render();
+      if(project){const p=state.projects.find(x=>x.id===project); if(p) openModal(p);}
     }
     function updateHash(){
       const params=new URLSearchParams();
       if(state.q) params.set("q",state.q);
       if(state.activeTags.size) params.set("tags", Array.from(state.activeTags).join(","));
-      if(state.sort!=="newest") params.set("sort",state.sort);
-      history.replaceState(null,"", params.toString()?"#"+params.toString():"#");
+      if(state.sort!=="featured") params.set("sort",state.sort);
+      history.replaceState(null,"", params.toString()?"#"+params.toString():"#projects");
     }
     function syncActiveTagButtons(){
-      Array.from(els.tagBar.querySelectorAll(".tag")).forEach(btn=>{
-        if(state.activeTags.has(btn.textContent)) btn.classList.add("active"); else btn.classList.remove("active");
-      });
+      els.tagBar.querySelectorAll(".tag").forEach(btn=>btn.classList.toggle("active",state.activeTags.has(btn.textContent)));
     }
-    window.addEventListener("hashchange",applyURLHash);
 
-    (function(){ render(); applyURLHash(); })();
+    /* Skills tabs */
+    (function buildSkills(){
+      const tabs=document.querySelector(".skill-tabs"), panels=document.getElementById("skillPanels");
+      SKILLS.forEach((s,i)=>{
+        const b=document.createElement("button"); b.type="button"; b.className="tag"+(i===0?" active":""); b.textContent=s.name;
+        b.setAttribute("role","tab"); b.setAttribute("aria-selected",i===0);
+        const panel=document.createElement("div"); panel.className="card skill-panel"+(i===0?" show":""); panel.setAttribute("role","tabpanel");
+        panel.innerHTML=`<p>${s.blurb}</p><div class="skill-list">${s.items.map(x=>`<span>${x}</span>`).join("")}</div>`;
+        b.addEventListener("click",()=>{
+          tabs.querySelectorAll(".tag").forEach(t=>{t.classList.remove("active");t.setAttribute("aria-selected",false);});
+          panels.querySelectorAll(".skill-panel").forEach(x=>x.classList.remove("show"));
+          b.classList.add("active"); b.setAttribute("aria-selected",true); panel.classList.add("show");
+        });
+        tabs.appendChild(b); panels.appendChild(panel);
+      });
+    })();
+
+    /* Count-up numbers (once, when visible) */
+    (function counters(){
+      const nodes=document.querySelectorAll("[data-count]");
+      if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const io=new IntersectionObserver(entries=>{
+        entries.forEach(en=>{
+          if(!en.isIntersecting) return; io.unobserve(en.target);
+          const el=en.target, end=+el.dataset.count, t0=performance.now(), dur=900;
+          (function tick(t){const k=Math.min((t-t0)/dur,1); el.textContent=Math.round(end*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(tick);})(t0);
+        });
+      },{threshold:.6});
+      nodes.forEach(n=>{n.textContent="0"; io.observe(n);});
+    })();
+
+    /* Active nav link on scroll */
+    (function navSpy(){
+      const links=[...document.querySelectorAll(".nav-links a")];
+      if(!("IntersectionObserver" in window)) return;
+      const io=new IntersectionObserver(entries=>{
+        entries.forEach(en=>{ if(en.isIntersecting) links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+en.target.id)); });
+      },{rootMargin:"-40% 0px -55% 0px"});
+      links.forEach(a=>{const s=document.querySelector(a.getAttribute("href")); if(s) io.observe(s);});
+    })();
+
+    /* Copy email */
+    document.getElementById("copyEmail").addEventListener("click",async()=>{
+      try{await navigator.clipboard.writeText("dhibidorra@gmail.com");}catch(e){}
+      const t=document.getElementById("toast"); t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),1600);
+    });
+
+    window.addEventListener("hashchange",applyURLHash);
+    render(); applyURLHash();
   </script>
 </body>
 </html>
-
