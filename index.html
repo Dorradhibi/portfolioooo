@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dorra Dhibi — Portfolio</title>
-  <meta name="description" content="Dorra Dhibi's LCA and sustainability portfolio: prospective LCA at SPAAK Circular Solutions, circular bio-based projects, and an interactive compost CFF dashboard." />
+  <meta name="description" content="Dorra Dhibi's LCA and sustainability portfolio: a compost CFF dashboard developed for her graduation thesis internship at Attero, and prospective LCA at SPAAK Circular Solutions." />
 
   <!-- ✅ Social preview -->
   <link rel="canonical" href="https://YOUR-VERCEL-URL.vercel.app/">
@@ -247,6 +247,27 @@
       <article class="card experience-card">
         <div class="experience-header">
           <div>
+            <h3>Attero — Netherlands</h3>
+            <p class="experience-role">Graduation Thesis Internship · Compost Life Cycle Assessment</p>
+          </div>
+          <span class="experience-year">2026</span>
+        </div>
+        <p>Completed my graduation thesis project during an internship at Attero, a Dutch waste treatment company. My research examined how the Circular Footprint Formula (CFF) affects the environmental footprint assigned to compost produced from green waste and GFT / biowaste.</p>
+        <ul>
+          <li>Modelled compost environmental impacts using openLCA, ecoinvent 3.12 and Environmental Footprint 3.1.</li>
+          <li>Compared CFF scenarios with cut-off and explored allocation, primary-reference burdens, quality factors and process sensitivity.</li>
+          <li>Developed an interactive dashboard to communicate the thesis results and let users explore their own process assumptions.</li>
+        </ul>
+        <div class="experience-tools" aria-label="Attero thesis methods and tools">
+          <span class="badge">Graduation thesis</span><span class="badge">Compost LCA</span><span class="badge">CFF</span><span class="badge">openLCA</span><span class="badge">EF 3.1</span>
+        </div>
+        <div class="quick-links">
+          <a class="btn primary" href="https://compost-cff-dashboard.sadosa.chatgpt.site" target="_blank" rel="noopener">Explore my thesis dashboard</a>
+        </div>
+      </article>
+      <article class="card experience-card">
+        <div class="experience-header">
+          <div>
             <h3>SPAAK Circular Solutions</h3>
             <p class="experience-role">Prospective Life Cycle Assessment</p>
           </div>
@@ -339,7 +360,7 @@
 
   <script>
     const PROJECTS = [
-      { id:"compost-cff-dashboard", title:"Compost CFF Dashboard — Green Waste & GFT", year:2026, tags:["LCA","Circular Economy","Interactive Tool"], tech:["openLCA","ecoinvent 3.12","EF 3.1","JavaScript"], description:"An interactive dashboard to compare compost footprints using CFF and cut-off, with editable inputs and sensitivity analysis.", long:"Developed from my compost LCA work at Attero, this dashboard makes the Green Waste and GFT / biowaste study models accessible through a browser. Users can enter process inputs and feedstock composition, compare Circular Footprint Formula scenarios with cut-off, and explore all 16 EF 3.1 parent impact categories. Scenario assumptions and study reference data remain visible.", highlights:["Editable yield, electricity, transport, fuel and direct emissions","Scenario comparisons across 16 EF 3.1 impact categories","Hotspot charts, sensitivity curves and tornado ranking","CSV export and optional saving of inputs on the user's device"], demo:"https://compost-cff-dashboard.sadosa.chatgpt.site", demoLabel:"Open dashboard", modalDemoLabel:"Open dashboard", visual:"cff" },
+      { id:"compost-cff-dashboard", title:"Graduation Thesis — Compost CFF Dashboard at Attero", year:2026, tags:["LCA","Circular Economy","Thesis Project","Interactive Tool"], tech:["openLCA","ecoinvent 3.12","EF 3.1","JavaScript"], description:"My graduation thesis project at Attero, a Dutch waste treatment company: exploring compost footprints with CFF, cut-off and sensitivity analysis.", long:"Developed as part of my graduation thesis project during my internship at Attero, a Dutch waste treatment company. The research examined the application of the Circular Footprint Formula to compost produced from green waste and GFT / biowaste, comparing it with cut-off and exploring key methodological and process assumptions. This dashboard translates the thesis models into an interactive tool: users can enter process inputs and feedstock composition, compare scenarios, and explore all 16 EF 3.1 parent impact categories. Scenario assumptions and study reference data remain visible.", highlights:["Graduation thesis internship at Attero — Dutch waste treatment company","CFF versus cut-off for green-waste and GFT compost","Editable process inputs and comparisons across 16 EF 3.1 impact categories","Hotspot charts, sensitivity curves, tornado ranking and CSV export"], demo:"https://compost-cff-dashboard.sadosa.chatgpt.site", demoLabel:"Open dashboard", modalDemoLabel:"Open dashboard", visual:"cff" },
       { id:"spaak-hydrogel-prospective-lca", title:"Prospective LCA of Banana-Leaf Superabsorbent Hydrogel", year:2026, tags:["LCA","Prospective LCA","Circular Economy"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scenario modelling"], description:"SPAAK Circular Solutions: assessing a banana-leaf-derived hydrogel against fossil-based superabsorbent polymers.", long:"Conducted prospective LCA of a route converting banana-leaf residues into cellulose, carboxymethyl cellulose (CMC) and superabsorbent hydrogel. Modelled industrial-scale scenarios and compared the proposed material with fossil-based superabsorbent polymers. The assessment explored environmental hotspots and process options before industrial deployment.", highlights:["Foreground inventory development and industrial scale-up scenarios","Benchmark comparison with fossil-based superabsorbent polymers","Acetic-acid and ethanol recovery scenarios","Alternative heat sources and environmental hotspot analysis"], visual:"hydrogel" },
       { id:"spaak-biofumigant-prospective-lca", title:"Prospective LCA of a Brewer's Spent Grain Biofumigant", year:2026, tags:["LCA","Prospective LCA","Bio-based Products"], tech:["openLCA","ecoinvent","ReCiPe 2016","Scale-up modelling"], description:"SPAAK Circular Solutions: exploring future industrial production of a fermentation-based biofumigant from brewery residues.", long:"Assessed an early-stage biofumigant route using brewer's spent grain and fermentation. Built a prospective cradle-to-gate model for projected industrial production and benchmarked the route against phosphine and methyl bromide. Results were interpreted as scenario-dependent projections, with attention to data limitations and uncertainty.", highlights:["Goal and scope, functional unit and modular process inventories","Laboratory-to-industrial scale-up scenarios","Benchmarking against conventional fumigants","Hotspot analysis of energy, fermentation inputs and downstream processing"], visual:"biofumigant" },
       { id:"microalgae-biodiesel-lca", title:"Comparative LCA of Microalgae Biodiesel (PBR vs Raceway)", year:2025, tags:["LCA","Bioenergy","Research"], tech:["openLCA","Ecoinvent","Python"], description:"Photobioreactors vs. open raceway ponds—environmental tradeoffs for algae biodiesel.", long:"Compares cultivation/processing inventories for PBR vs ORP across scenarios...", highlights:["Scenario comparison (PBR vs ORP)","Hotspot analysis","Recommendations for energy inputs"], demo:"https://drive.google.com/file/d/1aBh45azVgrKT8o_I-0oFTAjDKnx1IOjH/view", image:"microalgae.png" },
